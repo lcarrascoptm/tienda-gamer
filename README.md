@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 GameZone Pro
 Descripción
 
@@ -56,3 +57,6 @@ formulario de contacto para futuras funcionalidades dinámicas.
 
 Prompt 4:
 documentación README para proyecto académico con Git y GitHub.
+=======
+# gamezone-pro
+>>>>>>> 03334a5e8d2266e705e091e7f4191f158589e3b7
