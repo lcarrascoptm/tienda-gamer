@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0b0f19;
+    color:white;
+}
+
+header{
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    border-bottom:2px solid #00e5ff;
+}
+
+.logo h1{
+    color:#00e5ff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+.hero{
+    position:relative;
+}
+
+.hero img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:10%;
+    transform:translateY(-50%);
+}
+
+.hero-text h2{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#00e5ff;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+section{
+    padding:60px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.contenedor-productos{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.producto{
+    background:#111827;
+    width:300px;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,229,255,.3);
+    transition:.3s;
+}
+
+.producto:hover{
+    transform:translateY(-10px);
+}
+
+.producto img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.producto h3{
+    margin:15px 0;
+}
+
+.producto p{
+    padding:0 15px;
+}
+
+.producto span{
+    display:block;
+    margin:15px;
+    font-size:1.3rem;
+    color:#00e5ff;
+    font-weight:bold;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+form input,
+form textarea{
+    margin-bottom:15px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    background:#00e5ff;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
