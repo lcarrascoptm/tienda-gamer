@@ -8,6 +8,13 @@
 </head>
 <body>
 
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Cargando página...</p>
+        </div>
+    </div>
+
     <header>
         <div class="logo">
             <h1>🎮 Tienda Gamer</h1>
@@ -67,8 +74,7 @@
             <h2>Promociones Especiales</h2>
             <p>Hasta un 30% de descuento en periféricos seleccionados.</p>
 
-            <a href="https://store.steampowered.com/" target="_blank">
-            <a href="https://store.steampowered.com/" class="btn">Visitar Steam</a>
+            <a href="https://store.steampowered.com/" class="btn" target="_blank">Visitar Steam</a>
         </section>
 
         <section id="contacto">
@@ -96,5 +102,16 @@
         <p>© 2026 Tienda Gamer - Todos los derechos reservados By Luis Carrasco</p>
     </footer>
 
+    <button id="pago-flotante" onclick="irAPago()" aria-label="Pagar Ahora">Pagar Ahora</button>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        function irAPago() {
+            window.location.href = '#contacto';
+        }
+    </script>
 </body>
 </html>

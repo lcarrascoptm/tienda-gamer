@@ -154,3 +154,65 @@ footer{
     padding:25px;
     margin-top:40px;
 }
+
+#preloader{
+    position:fixed;
+    inset:0;
+    background:#0b0f19;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:opacity .4s ease, visibility .4s ease;
+}
+
+#preloader .preloader-content{
+    text-align:center;
+    color:#00e5ff;
+}
+
+#preloader .spinner{
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
+    border:12px solid rgba(0,229,255,.15);
+    border-top-color:#00e5ff;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+#preloader p{
+    font-size:1rem;
+    letter-spacing:.04em;
+}
+
+body.loaded #preloader{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+#pago-flotante{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    background:#00e5ff;
+    color:#111;
+    border:none;
+    border-radius:999px;
+    padding:18px 22px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 12px 30px rgba(0,229,255,.25);
+    z-index:1000;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+#pago-flotante:hover{
+    transform:translateY(-2px);
+    box-shadow:0 18px 38px rgba(0,229,255,.35);
+}
+
+@keyframes spin{
+    to{transform:rotate(360deg);}
+}
