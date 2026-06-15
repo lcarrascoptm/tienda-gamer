@@ -1,0 +1,347 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0b0f19;
+    color:white;
+}
+
+header{
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    border-bottom:2px solid #00e5ff;
+}
+
+.logo h1{
+    color:#00e5ff;
+    display:inline-block;
+    animation: float 4s ease-in-out infinite;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+.hero{
+    position:relative;
+}
+
+.hero img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:10%;
+    transform:translateY(-50%);
+}
+
+.hero-text h2{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#00e5ff;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+section{
+    padding:60px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.contenedor-productos{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.producto{
+    background:#111827;
+    width:300px;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,229,255,.3);
+    transition:.3s;
+}
+
+.producto:hover{
+    transform:translateY(-10px);
+}
+
+.producto img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.producto h3{
+    margin:15px 0;
+}
+
+.producto p{
+    padding:0 15px;
+}
+
+.producto span{
+    display:block;
+    margin:15px;
+    font-size:1.3rem;
+    color:#00e5ff;
+    font-weight:bold;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+form input,
+form textarea{
+    margin-bottom:15px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    background:#00e5ff;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+#preloader{
+    position:fixed;
+    inset:0;
+    background:#0b0f19;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:opacity .4s ease, visibility .4s ease;
+}
+
+#preloader .preloader-content{
+    text-align:center;
+    color:#00e5ff;
+}
+
+#preloader .spinner{
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
+    border:12px solid rgba(0,229,255,.15);
+    border-top-color:#00e5ff;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+#preloader p{
+    font-size:1rem;
+    letter-spacing:.04em;
+}
+
+body.loaded #preloader{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+#pago-flotante{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    background:#00e5ff;
+    color:#111;
+    border:none;
+    border-radius:999px;
+    padding:18px 22px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 12px 30px rgba(0,229,255,.25);
+    z-index:1000;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+#pago-flotante:hover{
+    transform:translateY(-2px);
+    box-shadow:0 18px 38px rgba(0,229,255,.35);
+}
+
+@keyframes spin{
+    to{transform:rotate(360deg);}
+}
+/* Video embed section styling */
+.video-section {
+    padding: 60px;
+    text-align: center;
+    background: #111827;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,229,255,.3);
+}
+
+    /* Floating social media buttons - left side */
+.fab-container {
+    position: fixed;
+    right: 20px; /* aligned to right */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+    /* make container background transparent */
+    background: transparent;
+}
+
+.fab {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #00e5ff, #0099ff);
+    color: #111;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 229, 255, .3);
+    backdrop-filter: blur(4px);
+    transition: transform .2s ease, opacity .2s ease;
+    opacity: 0.85; /* semi-transparent */
+}
+
+.floating-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+    border-radius: 999px;
+    background: linear-gradient(45deg, #00e5ff, #0099ff);
+    color: #111;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(0, 229, 255, .35);
+    backdrop-filter: blur(6px);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    animation: pulse 2.5s infinite ease-in-out;
+    opacity: 0.85;
+}
+
+.fab:hover, .floating-btn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.video-container {
+    display:flex;
+    justify-content:center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    width: 100%;   
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.responsive-video {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Floating social media buttons - left side */
+.fab-container {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+    background: transparent;
+}
+
+.fab {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    opacity: 0.85;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Tienda Gamer</title>
+    <link rel="stylesheet" href="css/estilos.css">
+<script type="text/javascript">
+    // Pon aquí el texto que quieres que se mueva en la pestaña
+    var textoPestana = " Bienvenido a Mi Tienda Gamer 🎮"; 
+    
+    // Calcula los espacios para simular el centrado
+    var espacios = " ".repeat(15);
+    var mensaje = espacios + textoPestana;
+
+    function moverTitulo() {
+        document.title = mensaje;
+        // Corta el primer carácter y lo pone al final para crear el movimiento
+        mensaje = mensaje.substring(1) + mensaje.substring(0, 1);
+    }
+
+    // Velocidad del movimiento (ej. 200 milisegundos)
+    setInterval(moverTitulo, 200);
+</script>
+</head>
+<body>
+
+
+
+
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Cargando página...</p>
+        </div>
+    </div>
+<!-- Payment Modal -->
+<div id="payment-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closePaymentModal()">&times;</span>
+    <h2>Selecciona método de pago</h2>
+    <div class="payment-options">
+      <button class="payment-btn" onclick="showCardForm()">Pago con Tarjeta</button>
+      <button class="payment-btn" onclick="showTransferForm()">Transferencia Bancaria</button>
+    </div>
+    <!-- Card Form -->
+    <form id="card-form" class="payment-form" style="display:none;" onsubmit="return validatePaymentForm(event)">
+      <h3>Datos de la Tarjeta</h3>
+      <label>Nombre Completo</label>
+      <input type="text" id="card-name" required>
+      <label>Correo Electrónico</label>
+      <input type="email" id="card-email" required>
+      <label>Número de Tarjeta</label>
+      <input type="text" id="card-number" required placeholder="1234 5678 9012 3456">
+      <label>Contraseña</label>
+      <input type="password" id="card-pass" required>
+      <label>Confirmar Contraseña</label>
+      <input type="password" id="card-pass-confirm" required>
+      <a href="#" onclick="openResetPasswordModal(); return false;">Restablecer contraseña</a>
+      <button type="submit" class="btn">Pagar</button>
+    </form>
+    <!-- Transfer Form -->
+    <form id="transfer-form" class="payment-form" style="display:none;" onsubmit="return validatePaymentForm(event)">
+      <h3>Datos para Transferencia</h3>
+      <label>Nombre Completo</label>
+      <input type="text" id="transfer-name" required>
+      <label>Correo Electrónico</label>
+      <input type="email" id="transfer-email" required>
+      <label>Banco</label>
+      <input type="text" id="bank-name" required placeholder="Banco XYZ">
+      <label>RUT o ID</label>
+      <input type="text" id="bank-id" required>
+      <a href="#" onclick="openResetPasswordModal(); return false;">Restablecer contraseña</a>
+      <button type="submit" class="btn">Confirmar Transferencia</button>
+    </form>
+  </div>
+</div>
+
+<!-- Reset Password Modal -->
+<div id="reset-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeResetPasswordModal()">&times;</span>
+    <h3>Restablecer contraseña</h3>
+    <form onsubmit="return resetPassword(event)">
+      <label>Correo Electrónico</label>
+      <input type="email" id="reset-email" required>
+      <button type="submit" class="btn">Enviar enlace</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/payment.js"></script>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        function irAPago() {
+            window.location.href = '#contacto';
+        }
+    </script>
+</body>
+</html>
+
+<!--indice-->
+    <header>
+        <div class="logo">
+            <h1 class="animated-logo">🎮 Tienda Gamer</h1>
+        </div>
+
+                <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#pago">Pago</a></li>
+                <li><a href="#registro">Registro</a></li>
+                <li><a href="#redes">Redes Sociales</a></li>
+            </ul>
+        </nav>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="hero">
+            <img src="img/banner-gamer.jpg" alt="Banner Gamer">
+            <div class="hero-text">
+                <h2>La mejor tecnología Gamer</h2>
+                <p>Equipamiento premium para verdaderos jugadores.</p>
+                <a href="#productos" class="btn">Ver Catálogo</a>
+            </div>
+        </section>
+<div class="video-section">
+    <h2>Vídeos de Juegos</h2>
+    <video class="responsive-video" controls>
+        <source src="C:/Users/n0t/Desktop/Front End/tienda-gamer-main/video/video_juegos.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+</div>
+
+</section>
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+
+            <div class="contenedor-productos">
+
+                <article class="producto">
+                    <img src="img/pc-gamer.jpg" alt="PC Gamer">
+                    <h3>PC Gamer RTX</h3>
+                    <p>Máximo rendimiento para juegos AAA.</p>
+                    <span>$1.499.990</span>
+                </article>
+
+                <article class="producto">
+                    <img src="img/teclado-rgb.jpg" alt="Teclado RGB">
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p>Switches mecánicos y luces configurables.</p>
+                    <span>$79.990</span>
+                </article>
+
+                <article class="producto">
+                    <img src="img/mouse-gamer.jpg" alt="Mouse Gamer">
+                    <h3>Mouse Gamer Pro</h3>
+                    <p>Sensor óptico de alta precisión.</p>
+                    <span>$39.990</span>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="ofertas">
+            <h2>Promociones Especiales</h2>
+            <p>Hasta un 30% de descuento en periféricos seleccionados.</p>
+
+            <a href="https://store.steampowered.com/" class="btn" target="_blank">Visitar Steam</a>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+
+            <form>
+
+                <label>Nombre</label>
+                <input type="text" placeholder="Ingrese su nombre">
+
+                <label>Correo Electrónico</label>
+                <input type="email" placeholder="correo@ejemplo.com">
+
+                <label>Mensaje</label>
+                <textarea rows="5"></textarea>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </section>
+<section id="pago">
+    <h2>Pago</h2>
+    <p>Selecciona tu método de pago y completa la información requerida.</p>
+</section>
+<section id="registro">
+    <h2>Registro</h2>
+    <form id="registro-form">
+        <label>Nick</label>
+        <input type="text" name="nick" required>
+        <label>Correo electrónico</label>
+        <input type="email" name="email" required>
+        <label>Contraseña</label>
+        <input type="password" name="password" required>
+        <label>Confirmar contraseña</label>
+        <input type="password" name="confirm_password" required>
+        <a href="#" onclick="openResetPasswordModal(); return false;">Restablecer contraseña</a>
+        <button type="submit" class="btn">Registrarse</button>
+    </form>
+</section>
+<section id="redes">
+    <h2>Redes Sociales</h2>
+    <label>Instagram</label>
+    <select name="instagram">
+        <option value="">Selecciona una opción</option>
+        <option value="perfil1">Perfil 1</option>
+        <option value="perfil2">Perfil 2</option>
+    </select>
+    <label>Facebook</label>
+    <select      name="facebook">
+        <option value="">Selecciona una opción</option>
+        <option value="pagina1">Página 1</option>
+        <option value="pagina2">Página 2</option>
+    </select>
+    <label>WhatsApp</label>
+    <select name="whatsapp">
+        <option value="">Selecciona una opción</option>
+        <option value="+1234567890">+1234567890</option>
+        <option value="+0987654321">+0987654321</option>
+    </select>
+</section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Tienda Gamer - Todos los derechos reservados By Luis Carrasco</p>
+    </footer>
