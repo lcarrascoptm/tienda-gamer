@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-GameZone Pro
+Tienda Gamer
 Descripción
 
-GameZone Pro es un sitio web estático orientado a la venta de productos gamer. El proyecto fue desarrollado utilizando HTML5 y CSS3, aplicando etiquetas semánticas, diseño responsivo mediante Flexbox y una interfaz visual moderna enfocada en el público gamer.
+Tienda Gamer es un sitio web estático orientado a la venta de productos gamer. El proyecto fue desarrollado utilizando HTML5 y CSS3, aplicando etiquetas semánticas, diseño responsivo mediante Flexbox y una interfaz visual moderna enfocada en el público gamer.
 
 Tecnologías Utilizadas
 HTML5
@@ -11,24 +11,24 @@ Git
 GitHub
 Estructura de Carpetas
 
-gamezone-pro/
-
-├── index.html
-
+tienda-gamer/
 ├── css/
-
 │ └── estilos.css
-
 ├── img/
-
 │ ├── banner-gamer.jpg
-
+│ ├── logo.jpg
+│ ├── mouse-gamer.jpg
 │ ├── pc-gamer.jpg
-
-│ ├── teclado-rgb.jpg
-
-│ └── mouse-gamer.jpg
-
+│ └── teclado-gamer.jpg
+├── java/com/tiendagamer/sections
+│ └── PagoSection.java
+├── js/
+│ ├── FormValidator.java
+│ ├── floatingButtons.js
+│ ├── payment.js
+├── video/
+│ ├── video_juegos.mp4
+├── index.html
 └── README.md
 
 Características
@@ -58,5 +58,5 @@ formulario de contacto para futuras funcionalidades dinámicas.
 Prompt 4:
 documentación README para proyecto académico con Git y GitHub.
 =======
-# gamezone-pro
+# tienda-gamer
 >>>>>>> 03334a5e8d2266e705e091e7f4191f158589e3b7
