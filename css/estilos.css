@@ -21,8 +21,11 @@ header{
 
 .logo h1{
     color:#00e5ff;
+<<<<<<< HEAD
     display:inline-block;
     animation: float 4s ease-in-out infinite;
+=======
+>>>>>>> 437ba610c2083bacf9b2a0c98e72ad9bb5a42c6a
 }
 
 nav ul{
@@ -218,6 +221,7 @@ body.loaded #preloader{
 @keyframes spin{
     to{transform:rotate(360deg);}
 }
+<<<<<<< HEAD
 /* Video embed section styling */
 .video-section {
     padding: 60px;
@@ -345,3 +349,5 @@ body.loaded #preloader{
     transform: scale(1.1);
     opacity: 1;
 }
+=======
+>>>>>>> 437ba610c2083bacf9b2a0c98e72ad9bb5a42c6a
